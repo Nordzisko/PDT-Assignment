@@ -1,0 +1,40 @@
+<html>
+<head>
+    <script src="{{url_for('static', filename='jquery-2.2.2.min.js')}}"></script>
+    <script src="{{url_for('static', filename='leaflet/leaflet.js')}}"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='leaflet/leaflet.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='demo.css')}}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="shortcut icon"  href="favicon.ico" type="image/x-icon" />
+    <link rel="icon"  href="favicon.ico" type="image/x-icon"/>
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="javascript:void(0)" onclick="showWayHome()">Show way home</a>
+      <a href="javascript:void(0)" onclick="showContRivers()">Show rivers</a>
+      <a href="javascript:void(0)" onclick="showNearPumps()">Show near points</a>
+      <a href="javascript:void(0)" onclick="clearMap()">Clear Map</a>
+      <br/>
+      <br/>
+      <div id="slidecontainer">
+          <input type="range" min="15" max="300" value="50" class="slider" id="myRange">
+      </div>
+      <a>Radius in KM: <span id="demo"></span></a>
+    </div>
+    <span style="font-size:30px;cursor:pointer;font-family: 'Comic Sans MS', cursive, sans-serif;padding-bottom: 5px;" onclick="openNav()"> &#9776;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Will You Survive Catastrophy ?!</span>
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>You have to select the exploded power plant!</p>
+      </div>
+    </div>
+    <div id="main">
+        <div id="llmap"></div>
+    </div>
+    <script src="{{url_for('static', filename='demo.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.7/leaflet-routing-machine.min.js"></script>
+    <script src="{{url_for('static', filename='leaflet/leaflet.ajax.js')}}"></script>
+</body>
+</html>

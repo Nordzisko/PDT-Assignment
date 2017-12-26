@@ -18,8 +18,8 @@ Build a map-based application, which lets the user see geo-based data on a map a
 
 ## My project
 
-**Application description**:
+**Application description**: How would region be affected by explosion of nuclear power plant ?	
 
-**Data source**:
+**Data source**: data about plants - https://fusiontables.google.com/DataSource?dsrcid=579353#rows:id=1
 
-**Technologies used**:
+**Technologies used**: Leaflet, Python 3.5, Flask
